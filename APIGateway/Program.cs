@@ -5,12 +5,12 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Configuration
+builder.Configuration.AddJsonFile("appsettings.json", optional: false)
 	.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-	.AddJwtBearer(options =>
+builder.Services.AddAuthentication("Bearer")
+	.AddJwtBearer("Bearer", options =>
 	{
 		options.TokenValidationParameters = new TokenValidationParameters
 		{

@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProductServiceAPI.Services;
+using System.Data;
 
 namespace ProductServiceAPI.Controllers
 {
@@ -13,7 +15,7 @@ namespace ProductServiceAPI.Controllers
 		{
 			_service = service;
 		}
-
+		//[Authorize(Roles = "Admin")]
 		[HttpGet]
 		public async Task<IActionResult> Get()
 			=> Ok(await _service.GetProducts());

@@ -3,11 +3,10 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddControllers();
-
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-	.AddJwtBearer(options =>
+builder.Configuration.AddJsonFile("appsettings.json", optional: false);
+builder.Services.AddAuthentication("Bearer")
+	.AddJwtBearer("Bearer", options =>
 	{
 		var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]);
 
