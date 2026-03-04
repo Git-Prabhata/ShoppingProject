@@ -21,7 +21,7 @@ namespace JWTWEBAPI.Controllers
 		public IActionResult Login([FromBody] LoginRequest Request)
 		{
 			// Dummy check
-			if (Request.Username == "admin" && Request.Password == "1234")
+			if ((Request.Username == "admin" || Request.Username == "admin1") && Request.Password == "1234")
 			{
 				var token = GenerateToken(Request.Username);
 				return Ok(new { token });
