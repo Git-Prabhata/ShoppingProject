@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "C/5GO1phd0dX7K8qmks3hqOh31d610PhoAWYK9RJuww=",
+  "Source": "OrderServiecAPI",
+  "BasePath": "_content/OrderServiecAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\VisualStudio_Code\\SHOPPING\\ProductServiceAPI\\ProductServiceAPI.csproj",
+      "Version": 2,
+      "Source": "ProductServiceAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
